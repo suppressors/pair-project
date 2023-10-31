@@ -1,0 +1,48 @@
+body {
+    min-height: 100vh;
+    min-width: 100vh;
+    background-color: #12181f;
+    color: aliceblue;
+  }
+  
+  h1 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 40px;
+  }
+  h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+#board {
+    height: 750px;
+    width: 880px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #aeadb3;
+    border: 10px solid rgb(147, 208, 228);
+
+}
+
+.card {
+    height: 180px;
+    width: 140px;
+    margin: 3px;
+    
+}
+.restart {
+    display: flex;
+    justify-content: center;
+}
+.restart button {
+    padding: 8px 16px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #5783eb;
+    color: white;
+   
+
+}
+
