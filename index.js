@@ -31,20 +31,21 @@ window.onload = function() {
 function shuffleCards() { 
     cardSet = cardList.concat(cardList); //duplicates card so theres two to match.
     for (let i = 0; i < cardList.length; i++) {
-        let j = Math.floor(Math.random() * cardSet.length);
+        let j = Math.floor(Math.random() * cardSet.length); // math.random gives a random number which is then multiplied by how many cards
+                                                            // and floor makes it an interger
 
         let temp = cardSet[i];
-        cardSet[i] = cardSet[j];
+        cardSet[i] = cardSet[j];    //
         cardSet[j] = temp;
     }
     // starts the game by pushing the images into the container and giving them set positions
 }
 function startGame() {
     for (let r = 0; r < rows; r++) { // sets the cards out in a grid and puts the images in those spots
-        let row = [];
+        let row = [];      
         for (let c = 0; c < columns; c++){
-            let cardImg = cardSet.pop();
-            row.push(cardImg);
+            let cardImg = cardSet.pop(); 
+            row.push(cardImg);  
             let card = document.createElement("img");
             card.id = r.toString() + "-" + c.toString();
             card.src = cardImg + ".jpg";
